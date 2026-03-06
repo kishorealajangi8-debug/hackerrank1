@@ -1,0 +1,17 @@
+n = int(input())
+student_marks = {}
+
+# Read student records
+for _ in range(n):
+    name, *marks = input().split()
+    student_marks[name] = list(map(float, marks))
+
+# Query student name
+query_name = input()
+
+# Calculate average
+marks = student_marks[query_name]
+average = sum(marks) / len(marks)
+
+# Print with 2 decimal places
+print(f"{average:.2f}")
