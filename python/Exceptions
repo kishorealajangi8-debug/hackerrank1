@@ -1,0 +1,16 @@
+T = int(input())
+if T in range(0, 10):
+    p = [ (input()) for i in range(T)]
+    for _ in p:
+        try:
+            result = int(_[0])//int(_[-1])     
+        except ZeroDivisionError:
+            print("Error Code: integer division or modulo by zero")
+        except ValueError:
+            if _[0].isdigit():
+                s = _[-1]
+            else:
+                s = _[0]
+            print("Error Code: invalid literal for int() with base 10: '{}'".format(s))
+        else:
+            print(result)
