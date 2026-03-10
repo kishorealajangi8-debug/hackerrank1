@@ -1,0 +1,16 @@
+n, m = list(map(int, input().split()))
+
+ints = [int(i) for i in input().split()]
+A = set([int(i) for i in input().split()])
+B = set([int(i) for i in input().split()])
+    
+happines = 0
+
+for i in ints:
+    if i in A:
+        happines += 1
+    elif i in B:
+        happines -= 1
+
+print(happines)
+
